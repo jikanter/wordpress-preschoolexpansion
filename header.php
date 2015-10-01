@@ -2,7 +2,7 @@
 /**
  * The header for our theme.
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * This is the template that displays all of the <head> section and everything up until the end of the header
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
@@ -13,11 +13,12 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes('xhtml'); ?>>
   <head>
-   <meta charset="<?php bloginfo( 'charset' ); ?>">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <link rel="profile" href="http://gmpg.org/xfn/11">
-   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+   <meta charset="<?php bloginfo( 'charset' ); ?>" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+   <meta name="keywords" values="preschool, education, support" />
+   <link rel="profile" href="http://gmpg.org/xfn/11" />
+   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+   
   <?php 
   global $template_class;
   $query = new WP_Query(array('pagename' => $template_class));
@@ -99,12 +100,14 @@
                       <tr>
                         <td align="center" valign="top" style="color:#c8c8c1; font-size: 14px; line-height: 24px;  font-family:Arial, Helvetica, sans-serif;">
                           <?php 
-                          while ($query->have_posts()) : 
-                            $query->the_post();
-                            the_content();
-                          endwhile;
+                          // run a loop here for the splash page only
+                          if (strtolower($template_class) == 'splash'):
+                            while ($query->have_posts()) : 
+                              $query->the_post();
+                              the_content();
+                            endwhile;
                           $query->reset_postdata();
-                   
+                          endif;
                           ?>
                         </td>
                       </tr>
@@ -120,6 +123,5 @@
               </table>        
             </td>
           </tr>
-
-        <!-- end header layout -->
+<!-- end header layout -->
 

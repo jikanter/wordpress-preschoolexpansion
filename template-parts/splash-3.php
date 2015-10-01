@@ -45,7 +45,7 @@ global $splash_data;
                 <!-- end space -->
                 <tr>
                   <td align="center" valign="top" >
-                    <a href="index.html" ><img class="container" src="<?php echo(preschoolexpansion_theme_image('images/link-img.png')); ?>" width="69" alt="link-img" /></a>
+                    <a href="<?php echo($splash_data['preschoolexpansion_text_link_field_5_5']); ?>" ><img class="container" src="<?php echo(preschoolexpansion_theme_image('images/link-img.png')); ?>" width="69" alt="link-img" /></a>
                   </td>
                 </tr>
                 <!-- start space -->

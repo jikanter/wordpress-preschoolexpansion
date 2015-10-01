@@ -190,7 +190,7 @@ function preschoolexpansion_api_init() {
 		__( 'Splash Page Editor', 'preschoolexpansion_textdomain' ),
 		'preschoolexpansion_splash_page_editor_section',
 		'preschoolExpansionSplashEditor'
-	);
+  );
   
   // Add the field with the names and function to use for our settings
   // and put in in our section
@@ -201,7 +201,7 @@ function preschoolexpansion_api_init() {
 		'preschoolExpansionSplashEditor',
 		'preschoolexpansion_splash_page_editor_section'
 	);
-
+       
 	add_settings_field(
 		'preschoolexpansion_textarea_field_1',
 		__( 'Section 1 Content', 'preschoolexpansion_textdomain' ),
@@ -209,6 +209,14 @@ function preschoolexpansion_api_init() {
 		'preschoolExpansionSplashEditor',
 		'preschoolexpansion_splash_page_editor_section'
 	);
+        
+         add_settings_field(
+                'preschoolexpansion_text_link_field_1_5',
+                __( 'Section 1 Link', 'preschoolexpansion_textdomain' ),
+                'preschoolexpansion_text_link_field_1_5_render',
+                'preschoolExpansionSplashEditor',
+                'preschoolexpansion_splash_page_editor_section'
+         );
 
 	add_settings_field(
 		'preschoolexpansion_text_field_2',
@@ -225,6 +233,14 @@ function preschoolexpansion_api_init() {
 		'preschoolExpansionSplashEditor',
 		'preschoolexpansion_splash_page_editor_section'
 	);
+        
+        add_settings_field(
+                'preschoolexpansion_text_link_field_3_5',
+                __( 'Section 2 Link', 'preschoolexpansion_textdomain' ),
+                'preschoolexpansion_text_link_field_3_5_render',
+                'preschoolExpansionSplashEditor',
+                'preschoolexpansion_splash_page_editor_section'
+        );
 
 	add_settings_field(
 		'preschoolexpansion_text_field_4',
@@ -241,6 +257,14 @@ function preschoolexpansion_api_init() {
 		'preschoolExpansionSplashEditor',
 		'preschoolexpansion_splash_page_editor_section'
 	);
+        
+        add_settings_field(
+                'preschoolexpansion_text_link_field_5_5',
+                __( 'Section 3 Link', 'preschoolexpansion_textdomain' ),
+                'preschoolexpansion_text_link_field_5_5_render',
+                'preschoolExpansionSplashEditor',
+                'preschoolexpansion_splash_page_editor_section'
+         );
   
   
 
@@ -280,7 +304,13 @@ function preschoolexpansion_textarea_field_1_render(  ) {
 	echo('<textarea cols="40" rows="5" name="preschoolexpansion_settings[preschoolexpansion_textarea_field_1]">');
         echo $options['preschoolexpansion_textarea_field_1']; 
  	echo('</textarea>');
+}
 
+function preschoolexpansion_text_link_field_1_5_render() { 
+  $options = get_option('preschoolexpansion_settings');
+  echo('<input type="text" name="preschoolexpansion_settings[preschoolexpansion_text_link_field_1_5]" value="');
+  echo $options['preschoolexpansion_text_link_field_1_5']; 
+  echo('">');
 }
 
 
@@ -305,6 +335,14 @@ function preschoolexpansion_textarea_field_3_render(  ) {
 	
 }
 
+function preschoolexpansion_text_link_field_3_5_render() { 
+  $options = get_option('preschoolexpansion_settings');
+  echo('<input type="text" name="preschoolexpansion_settings[preschoolexpansion_text_link_field_3_5]" value="');
+  echo $options['preschoolexpansion_text_link_field_3_5']; 
+  echo('">');
+}
+
+
 
 function preschoolexpansion_text_field_4_render(  ) {
 
@@ -323,8 +361,15 @@ function preschoolexpansion_textarea_field_5_render(  ) {
         echo('<textarea cols="40" rows="5" name="preschoolexpansion_settings[preschoolexpansion_textarea_field_5]">');
         echo $options['preschoolexpansion_textarea_field_5'];
         echo('</textarea>');
-
 }
+
+function preschoolexpansion_text_link_field_5_5_render() { 
+  $options = get_option('preschoolexpansion_settings');
+  echo('<input type="text" name="preschoolexpansion_settings[preschoolexpansion_text_link_field_5_5]" value="');
+  echo $options['preschoolexpansion_text_link_field_5_5']; 
+  echo('">');
+}
+
 
 /**
  * Load custom classes
