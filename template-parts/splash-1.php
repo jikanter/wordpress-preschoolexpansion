@@ -4,13 +4,14 @@
  */
 
 $body_class = '1';
+// Not using this at the moment. 
 $splash = new splash_page_type();
 splash_page_type::load_fields();
+
 global $splash_data;
 // What I want here is to query the value for 2 textboxes and an html area from the admin interface, 
 // Each splash section should have it's own instance of 2 textboxes and an html area in the admin interface
 // perhaps under the section "Splash Editor" or something.
-//$content = new splash_page_section(the_ID(), array('name' => 'splash_page_section_' + $body_class)); // get the content here
 ?>
 
 <tr>

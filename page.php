@@ -15,17 +15,14 @@
  */
 
 get_header(); ?>
-<!--
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+ <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" style="background: #f4f4f4;" class="container">
+  
+   <?php while (have_posts()): the_post(); ?>
+   
+    <?php get_template_part('template-parts/content', 'page'); ?>
+  
+   <?php endwhile; // End of Loop ?>
+   
+ </table>
 
-			<?php //while ( have_posts() ) : the_post(); ?>
-
-				<?php //get_template_part( 'template-parts/content', 'page' ); ?>
-
-			<?php //endwhile; // End of the loop. ?>
-
-		</main> #main 
-	</div> #primary -->
-<?php // removed the get_sidebar() call for now, we may want that back ?>
 <?php get_footer(); ?>

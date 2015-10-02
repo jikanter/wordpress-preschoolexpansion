@@ -29,7 +29,7 @@
    <table class="background" width="100%" border="0" background="<?php echo(preschoolexpansion_theme_image('images/background-pattern.gif'));?>" background-repeat="repeat-y" cellspacing="0" cellpadding="0" align="center" style=" width:100% !important; background-image: url(<?php echo(get_template_directory_uri() . "/images/background-pattern.gif")?>); background-repeat: repeat;">
     <tr>
       <td align="center" valign="top">
-
+        
         <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
           <!-- start space -->
           <tr>
@@ -56,6 +56,7 @@
                   </td>
                 </tr>
                 <!-- start space -->
+                <?php if (strtolower($template_class) == 'splash') { ?>
                 <tr>
                   <td valign="top" height="115"  class="indent">
                   </td>
@@ -91,11 +92,13 @@
                           <?php bloginfo('description'); ?>
                         </td>
                       </tr>
+                      
                       <!-- start space -->
                       <tr>
                         <td valign="top" height="20">
                         </td>
                       </tr>
+                      <?php } //endif ('splash')  ?>
                       <!-- end space -->
                       <tr>
                         <td align="center" valign="top" style="color:#c8c8c1; font-size: 14px; line-height: 24px;  font-family:Arial, Helvetica, sans-serif;">
