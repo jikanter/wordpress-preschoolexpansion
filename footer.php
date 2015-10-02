@@ -69,13 +69,13 @@
                   <table width="174" border="0" cellspacing="0" cellpadding="0" align="center" >
                     <tr>
                       <td valign="top" align="center">
-                        <a href="index.html"><img src="<?php echo(preschoolexpansion_theme_image('images/facebook.png')); ?>" alt="facebook" width="51" style="vertical-align:bottom !important;" class="social-icon" /></a>
+                        <a href="https://www.facebook.com/preschoolexpansionproject"><img src="<?php echo(preschoolexpansion_theme_image('images/facebook.png')); ?>" alt="facebook" width="51" style="vertical-align:bottom !important;" class="social-icon" /></a>
                       </td>
                       <td valign="top" align="center">
-                        <a href="index.html"><img src="<?php echo(preschoolexpansion_theme_image('images/twitter.png')); ?>" alt="twitter" width="51" style="vertical-align:bottom !important;" class="social-icon" /></a>
+                        <a href="https://twitter.com/ecpdpep"><img src="<?php echo(preschoolexpansion_theme_image('images/twitter.png')); ?>" alt="twitter" width="51" style="vertical-align:bottom !important;" class="social-icon" /></a>
                       </td>
                       <td valign="top" align="center">
-                        <a href="index.html"><img src="<?php echo(preschoolexpansion_theme_image('images/skype.png')); ?>" alt="skype" width="51" style="vertical-align:bottom !important;" class="social-icon" /></a>
+                        <a href="skype:peg-ecpd"><img src="<?php echo(preschoolexpansion_theme_image('images/skype.png')); ?>" alt="skype" width="51" style="vertical-align:bottom !important;" class="social-icon" /></a>
                       </td>
                     </tr>
                   </table>
