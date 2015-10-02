@@ -19,7 +19,7 @@
       <!-- end space -->
       <tr>
         <td align="center" valign="top" style="padding: 0 20px;">
-          <h3 class="section-heading"><?php the_title() ?></h3>
+          <h3 class="section-heading <?php the_ID() ?>"><?php the_title() ?></h3>
           <span class="section-subheading"></span>
         </td>
       </tr>

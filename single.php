@@ -16,8 +16,6 @@ get_header(); ?>
 
       <?php get_template_part( 'template-parts/content', 'single' ); ?>
                   
-    <?php ?>
-
     <?php endwhile; // End of the loop. ?>
 
 <?php // removed the get_sidebar() call for now, we may want that back ?>

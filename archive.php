@@ -8,18 +8,16 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" style="background: #f4f4f4;" class="container">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+                                <tr>
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					the_archive_title( '<td><h1 class="page-title">', '</h1></td>' );
+					the_archive_description( '<td><div class="taxonomy-description">', '</div></td>' );
 				?>
-			</header><!-- .page-header -->
+                                </tr>		
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -43,9 +41,5 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+</table>
 <?php get_footer(); ?>
